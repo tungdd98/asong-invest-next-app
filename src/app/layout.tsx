@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/global.css";
 import AppHeader from "@/components/AppHeader";
 import AppFooter from "@/components/AppFooter";
-import Backdrop from "@/components/Backdrop";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +17,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen flex flex-col">
         <AppHeader />
-
-        <Backdrop />
 
         <main className="flex-grow">{children}</main>
 

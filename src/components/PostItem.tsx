@@ -10,7 +10,6 @@ interface PostItemProps {
 }
 
 const PostItem: FC<PostItemProps> = ({ data }) => {
-  console.log(data);
   const [imageUrl, setImageUrl] = useState("");
 
   const getImageUrl = useCallback(async () => {
@@ -62,7 +61,7 @@ const PostItem: FC<PostItemProps> = ({ data }) => {
       </div>
       <div className="p-4 pt-2 lg:p-5">
         <h3 className="font-bold text-lg c-transition line-clamp-2 text-justify hover:text-primary">
-          <Link href={`/news/${data.slug}`} itemProp="url">
+          <Link href={`/news/${data.id}`} itemProp="url">
             <span itemProp="headline">{data.title.rendered}</span>
           </Link>
         </h3>
