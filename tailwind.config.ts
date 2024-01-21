@@ -8,13 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#2c3e50",
+        blue: {
+          100: "#003366",
+        },
+        pink: {
+          100: "#f3525a",
+        },
+      },
+      container: {
+        screens: {
+          "2xl": "1312px",
+        },
       },
     },
+    container: {
+      center: true,
+      padding: "16px",
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
 };
 export default config;
